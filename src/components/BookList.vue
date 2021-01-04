@@ -46,7 +46,6 @@ export default {
   computed: {
     filteredBooks() {
       return _.filter(this.books, ["ownership", this.holding]);
-      // return this.books.filter(book => book.ownership === this.holding);
     },
   },
   methods: {
