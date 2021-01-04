@@ -38,8 +38,8 @@ export default {
       books: [
         { title: "Self-Reliance", author: "Ralph Waldo Emerson", finishedReading: true, ownership: "borrowed" },
         { title: "American Gods", author: "Neil Gaiman", finishedReading: false, ownership: "bought" },
-        { title: "Amusing Ourselves to Death", author: "Neil Postman", finishedReading: true, ownership: "borrowed" },
-      ],
+        { title: "Amusing Ourselves to Death", author: "Neil Postman", finishedReading: true, ownership: "borrowed" }
+      ]
     };
   },
   components: { BookItem, BookForm },
@@ -52,8 +52,8 @@ export default {
   methods: {
     appendBook(bookData) {
       this.books.push({ title: bookData.bookTitle, author: bookData.bookAuthor, finishedReading: bookData.finishedReading, ownership: bookData.ownership });
-    },
-  },
+    }
+  }
 };
 </script>
 
