@@ -36,31 +36,13 @@ export default {
       filters: ["bought", "borrowed"],
       holding: "bought",
       books: [
-        {
-          title: "Self-Reliance",
-          author: "Ralph Waldo Emerson",
-          finishedReading: true,
-          ownership: "borrowed",
-        },
-        {
-          title: "American Gods",
-          author: "Neil Gaiman",
-          finishedReading: false,
-          ownership: "bought",
-        },
-        {
-          title: "Amusing Ourselves to Death",
-          author: "Neil Postman",
-          finishedReading: true,
-          ownership: "borrowed",
-        },
+        { title: "Self-Reliance", author: "Ralph Waldo Emerson", finishedReading: true, ownership: "borrowed" },
+        { title: "American Gods", author: "Neil Gaiman", finishedReading: false, ownership: "bought" },
+        { title: "Amusing Ourselves to Death", author: "Neil Postman", finishedReading: true, ownership: "borrowed" },
       ],
     };
   },
-  components: {
-    BookItem,
-    BookForm,
-  },
+  components: { BookItem, BookForm },
   computed: {
     filteredBooks() {
       return _.filter(this.books, ["ownership", this.holding]);
@@ -69,12 +51,7 @@ export default {
   },
   methods: {
     appendBook(bookData) {
-      this.books.push({
-        title: bookData.bookTitle,
-        author: bookData.bookAuthor,
-        finishedReading: bookData.finishedReading,
-        ownership: bookData.ownership,
-      });
+      this.books.push({ title: bookData.bookTitle, author: bookData.bookAuthor, finishedReading: bookData.finishedReading, ownership: bookData.ownership });
     },
   },
 };
