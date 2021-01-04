@@ -10,7 +10,11 @@
       <option v-for="filter in filters" :key="filter">{{ filter }}</option>
     </select>
     <ul>
-      <book-item v-for="book in filteredBooks" :key="book.id" :book="book"></book-item>
+      <book-item
+        v-for="book in filteredBooks"
+        :key="book.id"
+        :book="book"
+      ></book-item>
     </ul>
     <br />
     <hr />
@@ -61,7 +65,7 @@ export default {
     filteredBooks() {
       return _.filter(this.books, ["ownership", this.holding]);
       // return this.books.filter(book => book.ownership === this.holding);
-    }
+    },
   },
   methods: {
     appendBook(bookData) {
